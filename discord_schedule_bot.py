@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Discord Calendly / When2Meet Bot (`discord_calendly_bot.py`)
+Discord Scheduler Bot (`discord_schedule_bot.py`)
 ============================================================
 A Discord bot built with `discord.py` (v2.x) that lets a primary user (host)
 create an availability poll within a master timespan and allows any server
@@ -33,9 +33,9 @@ Usage:
        pip install -U discord.py
   2. Set your bot token and run:
        export DISCORD_BOT_TOKEN="your-bot-token-here"
-       python3 discord_calendly_bot.py
+       python3 discord_schedule_bot.py
   3. Optional local CLI simulation (no Discord token required):
-       python3 discord_calendly_bot.py --demo
+       python3 discord_schedule_bot.py --demo
 """
 
 from __future__ import annotations
@@ -1340,7 +1340,7 @@ def main() -> None:
         raise SystemExit(
             "discord.py is not installed. Install it via:\n"
             "  pip install -U discord.py\n"
-            "Or run `python3 discord_calendly_bot.py --demo` to test the engine locally."
+            "Or run `python3 discord_schedule_bot.py --demo` to test the engine locally."
         )
 
     token = os.getenv("DISCORD_BOT_TOKEN")
@@ -1349,7 +1349,7 @@ def main() -> None:
             "Missing DISCORD_BOT_TOKEN environment variable.\n"
             "Set it via:\n"
             "  export DISCORD_BOT_TOKEN='your_token_here'\n"
-            "  python3 discord_calendly_bot.py\n"
+            "  python3 discord_schedule_bot.py\n"
             "Or run with `--demo` to preview the scheduling engine."
         )
 
